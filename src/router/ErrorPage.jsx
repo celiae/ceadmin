@@ -21,12 +21,12 @@ export default function ErrorPage() {
           <Card>
             <CardActionArea
               onClick={() => {
-                navigate(`/`);
+                navigate(-1);
               }}
             >
               <CardHeader title="Oops!" subheader="Cannot find page" />
               <CardContent>
-                <Button variant="outlined">Come back to home</Button>
+                <Button variant="outlined">Go back</Button>
               </CardContent>
             </CardActionArea>
           </Card>

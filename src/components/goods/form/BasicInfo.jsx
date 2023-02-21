@@ -31,7 +31,7 @@ export default function BasicInfo() {
               value={value}
               onChange={(newValue) => {
                 setValue(dayjs(newValue));
-                // dispatch(setDate(newValue));
+                dispatch(setDate(newValue.toString()));
               }}
               renderInput={(params) => (
                 <TextField {...params} helperText={null} />

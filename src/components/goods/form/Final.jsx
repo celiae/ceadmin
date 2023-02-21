@@ -7,6 +7,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import dayjs from "dayjs";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAll } from "../../../app/goodSlice";
@@ -15,7 +16,7 @@ import { setMsg, setOpen } from "../../../app/snackbarSlice";
 export default function Final() {
   const good = useSelector(selectAll);
   const dispatch = useDispatch();
-
+  const good_date = new Date(good.date).toLocaleDateString();
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>
@@ -23,10 +24,10 @@ export default function Final() {
           <CardActionArea>
             <CardHeader title="Form" subheader={new Date().toString()} />
             <CardContent>
-              <Typography>name:{good.name}</Typography>
-              <Typography>date:{good.date}</Typography>
-              <Typography>price:{good.price}</Typography>
-              <Typography>discount:{good.discount}</Typography>
+              <Typography>name: {good.name}</Typography>
+              <Typography>date: {good_date}</Typography>
+              <Typography>price: {good.price}</Typography>
+              <Typography>discount: {good.discount}</Typography>
             </CardContent>
           </CardActionArea>
         </Card>

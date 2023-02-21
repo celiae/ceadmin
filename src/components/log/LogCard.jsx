@@ -9,19 +9,27 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LogCard({ logs }) {
+  const navigate = useNavigate();
+
   return (
     <>
       <TextField variant="standard" label={"Search"} placeholder={"keywords"} />
       {logs.map((l, index) => (
         <Box key={index} m={3}>
           <Card>
-            <CardActionArea>
+            <CardActionArea
+              onClick={() => {
+                navigate(`${l.id}`);
+                console.log(l.id);
+              }}
+            >
               <CardHeader title="Log" subheader={l.date} />
               <CardContent>
                 <Typography>{l.content}</Typography>
-                <Button>Get in</Button>
+                <Typography>Get in</Typography>
               </CardContent>
             </CardActionArea>
           </Card>

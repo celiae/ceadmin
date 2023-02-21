@@ -115,7 +115,7 @@ export default function HomeTable() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Paper sx={{ width: "100%", mb: 2 }}>
+      <Paper sx={{ width: "100%", mb: 2, overflow: "auto" }}>
         <EnhancedTableToolbar numSelected={selected.length} title={title} />
         <TableContainer>
           <Table

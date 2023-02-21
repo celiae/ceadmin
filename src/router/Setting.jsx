@@ -27,9 +27,9 @@ const tabItem = [
 ];
 
 export default function Setting() {
-  const [time, setTime] = React.useState(new Date().toString());
+  const [time, setTime] = React.useState(new Date().toISOString());
   setInterval(() => {
-    setTime(new Date().toString());
+    setTime(new Date().toISOString());
   }, 1000);
   return (
     <SpecificTransition>

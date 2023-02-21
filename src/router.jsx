@@ -19,6 +19,7 @@ import Personal from "./router/Personal";
 import ChangePassword from "./components/personal/ChangePassword";
 import SignUp from "./router/SignUp";
 import ErrorPage from "./router/ErrorPage";
+import Detail from "./components/log/Detail";
 
 const initailRouter = createBrowserRouter([
   {
@@ -73,7 +74,16 @@ const initailRouter = createBrowserRouter([
           },
           {
             path: "log",
-            element: <Log />,
+            children: [
+              {
+                index: true,
+                element: <Log />,
+              },
+              {
+                path: ":id",
+                element: <Detail />,
+              },
+            ],
           },
           {
             path: "chart",

@@ -20,7 +20,7 @@ import { TfiPackage } from "react-icons/tfi";
 import { TbInfoCircle } from "react-icons/tb";
 import { BsPersonCircle } from "react-icons/bs";
 import { IoSettings } from "react-icons/io5";
-import { FaAccusoft, FaRegChartBar } from "react-icons/fa";
+import { FaAccusoft, FaReact, FaRegChartBar } from "react-icons/fa";
 import { GiEdgedShield, GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -28,7 +28,7 @@ import { selectAll } from "../../app/userSlice";
 
 const drawerWidth = 240;
 
-const title = "celiae.github.io";
+const title = "CeAdmin";
 
 function ResponsiveDrawer(props) {
   const { window, children } = props;
@@ -122,6 +122,9 @@ function ResponsiveDrawer(props) {
           <Typography variant="h6" noWrap component="div">
             {title}
           </Typography>
+          <IconButton color="inherit">
+            <FaReact className={"animate-spin delay-75"} />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Box

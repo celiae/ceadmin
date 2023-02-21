@@ -19,7 +19,6 @@ export const goods = [
   },
 ];
 
-
 /**
  * *Useless
  */
@@ -48,4 +47,22 @@ export const headCells = [
     disablePadding: false,
     label: "",
   },
+];
+
+/**
+ * * Chart
+ */
+export const data = [
+  { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
+  { name: "Page B", uv: 1300, pv: 2400, amt: 2400 },
+  { name: "Page C", uv: 400, pv: 2400, amt: 2400 },
+  { name: "Page D", uv: 300, pv: 2400, amt: 2400 },
+  { name: "Page E", uv: 300, pv: 2400, amt: 2400 },
+  { name: "Page F", uv: 300, pv: 2400, amt: 2400 },
+  { name: "Page G", uv: 300, pv: 2400, amt: 2400 },
+];
+export const smallData = [
+  { name: "Page A", uv: 400, pv: 2400, amt: 2400 },
+  { name: "Page B", uv: 1300, pv: 2400, amt: 2400 },
+  { name: "Page C", uv: 400, pv: 2400, amt: 2400 },
 ];

@@ -3,6 +3,7 @@ import { MdPermMedia } from "react-icons/md";
 import React from "react";
 
 export default function Media() {
+  const [media, setMedia] = React.useState();
   return (
     <Button
       size="large"
@@ -11,7 +12,18 @@ export default function Media() {
       aria-label="upload picture"
       component="label"
     >
-      <input hidden accept="image/*" type="file" />
+      <input
+        onChange={(e) => {
+          setMedia(e.target.files);
+          console.log(media);
+          const reader = new FileReader();
+          reader.readAsDataURL(e.target.files[0]);
+        }}
+        hidden
+        multiple
+        accept="image/*"
+        type="file"
+      />
       <MdPermMedia size={100} />
     </Button>
   );
